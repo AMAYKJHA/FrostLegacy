@@ -48,6 +48,7 @@ class Player:
                 self.animate(self.dead)
                 if self.walk_count == len(self.dead) - 1:
                     self.dead_animation_played = True
+            return
         #     if self.lives ==0:
         #         return 0
         #     else:
@@ -144,7 +145,7 @@ class Player:
         if self.health <= 0:
             self.health = 0
             self.is_alive = False
-            self.lives -= 1 
+            # self.lives -= 1 
     def respawn(self):
         self.is_alive = True
         self.health = 100  # Reset health
